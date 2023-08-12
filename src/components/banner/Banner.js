@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import './Banner.css';
-import { API_KEY ,IMG_URL} from '../../constants/constants';
+import { IMG_URL} from '../../constants/constants';
 import axios from '../../constants/axios';
 import { original } from '../../constants/urls';
+import BannerShimmer from '../shimmer effect/BannerShimmer';
 
 function Banner(){
     const [movie, setMovie] = useState(null)
@@ -16,7 +17,7 @@ function Banner(){
         })
     },[])
 
-    return !movie ? 'loading...' :(
+    return !movie ? <BannerShimmer/> :(
         <div className='banner' style={{backgroundImage:`URL(${IMG_URL+movie.backdrop_path})`}}>
              
             <div className='contant'>

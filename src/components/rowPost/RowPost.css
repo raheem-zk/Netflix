@@ -1,5 +1,6 @@
 
 .row{
+    margin-top: 20px;
     margin-left: 20px;
     color: white;
 }
@@ -28,4 +29,10 @@
 .poster:hover{
     cursor: pointer;
     transform: scale(1.1);
+}
+
+
+.movie-title{
+    display: flex;
+    justify-content: center;
 }
